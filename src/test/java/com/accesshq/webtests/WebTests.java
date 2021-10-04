@@ -1,4 +1,4 @@
-package com.accesshq;
+package com.accesshq.webtests;
 
 import com.accesshq.ui.HomePage;
 import org.junit.jupiter.api.AfterEach;
@@ -8,16 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class WebTests {
-    WebDriver driver;
-
-    @BeforeEach
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.get("https://www.dominos.com.au/");
-        driver.manage().window().maximize();
-
-    }
+public class WebTests extends BaseTestSuite {
 
     @Test
     public void clickMenuButtonTest() {
@@ -34,8 +25,4 @@ public class WebTests {
 
     }
 
-    @AfterEach
-    public void cleanup() {
-        driver.quit();
-    }
 }
